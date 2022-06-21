@@ -12,12 +12,6 @@ body {
     color: #27285C;
 }
 
-/* @media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
-    html, body {
-        font-size: 30px !important;
-    }
-} */
-
 /* Simple grid here just for body, for other grids I used Bootstrap */
 
 body {
@@ -45,12 +39,6 @@ my-card .card-body {
     aspect-ratio: 16/11;
 }
 
-.btn>img {
-    width: 1.5em;
-    height: 1.5em;
-    margin: -0.3em 1em -0.2em 0;
-}
-
 nav.navbar {
-    background-color: #d3e6ed !important;
+    background-color: #e1eef4 !important;
 }

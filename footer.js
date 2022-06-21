@@ -12,7 +12,7 @@ class Footer extends HTMLElement {
     this.innerHTML = /* html */ `
         <footer class="py-5 mt-5 border-top border-light border-opacity-75">
           <div class="container">
-            <small class="d-block text-center text-muted">&copy; 2022</small>
+            <small class="d-block text-center text-dark">&copy; 2022</small>
           </div>
         </footer>
       `;
