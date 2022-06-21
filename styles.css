@@ -9,7 +9,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 65px;
-    color: #27285C;
+}
+
+:root {
+    --bs-body-color: #27285C;
 }
 
 /* Simple grid here just for body, for other grids I used Bootstrap */
@@ -40,5 +43,6 @@ my-card .card-body {
 }
 
 nav.navbar {
+    /* is set in theme, so changing directly, not via CSS var */
     background-color: #e1eef4 !important;
 }
