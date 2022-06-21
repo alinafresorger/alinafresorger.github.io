@@ -4,6 +4,7 @@ class Card extends HTMLElement {
     super();
   }
   connectedCallback() {
+    const title = this.getAttribute("data-title");
     // TODO use templates
     // Set innerHTML using attributes that were defined in parent HTML
     // We use custom element's REAL dom.
@@ -11,16 +12,18 @@ class Card extends HTMLElement {
     // Shadow DOM is a technology used along with Custom Elements to create isolated sub-DOMs with custom styles
     this.innerHTML = /* html */ `
         <div class="card">
-            <img src="${this.getAttribute("data-image")}" class="card-img-top" alt="${this.getAttribute("data-title")}">
-                <div class="card-body">
-                    <h5 class="card-title">${this.getAttribute("data-title")}</h5>
-                    <p class="card-text">${this.getAttribute("data-description")}</p>
-                </div>
-                <div class="card-footer">
-                    <a href="${this.getAttribute("data-url")}" target="blank" class="btn btn-primary">Run</a>
-                    <a href="${this.getAttribute("data-repo")}" target="blank" class="btn btn-primary">Go to repo</a>
-                </div>
+            <a href="${this.getAttribute("data-url")}" target="blank">
+                <img src="${this.getAttribute("data-image")}" class="card-img-top" alt="${title}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text">${this.getAttribute("data-description")}</p>
             </div>
+            <div class="card-footer">
+                <a href="${this.getAttribute("data-url")}" target="blank" class="btn btn-primary">Run</a>
+                <a href="${this.getAttribute("data-repo")}" target="blank" class="btn btn-primary">Go to repo</a>
+            </div>
+        </div>
         `;
   }
 }
